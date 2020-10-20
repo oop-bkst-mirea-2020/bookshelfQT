@@ -27,11 +27,22 @@ private slots:
 
     void on_pushButton_addSelf_clicked();
 
+    void on_listWidget_Shelfs_itemClicked(QListWidgetItem *item);
+
+    void on_pushButton_addBook_clicked();
+
+    void on_listWidget_Books_itemClicked(QListWidgetItem *item);
+
+    void on_pushButton_delBShelf_clicked();
+
+    void on_pushButton_delShelf_clicked();
+
 private:
     Ui::MainWindow *ui;
     vector<BookShelf> bookShelfs;//Шкафы
     int bShelfID;
     int shelfID;
     int bookID;
+    void updateBookList();
 };
 #endif // MAINWINDOW_H
